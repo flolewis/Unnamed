@@ -1,5 +1,11 @@
 # Courtside — NBA Season Lab
 
+## Deploy to Vercel
+
+Import the repository root with Node.js 22.x. The committed `vercel.json` selects Next.js, runs `npm run build:vercel` (`next build`), and uses `.next` output, including `routes-manifest.json`. Use `npm ci` for installation. The home page is prerendered; `/api/league` and `/api/team` remain dynamic server routes.
+
+For a local Vercel-style production check, run `npm run build:vercel` then `npm run start:vercel`. The original `npm run build` still targets Sites/Cloudflare via Vinext and writes `dist`; do not use that command for Vercel or point Vercel at `dist`.
+
 A free-data NBA fantasy and team outlook site for 2026–27. ESPN supplies current rosters, historical player averages and standings. PBP Stats supplies 2025–26 pace and teammate on/off usage. Research snapshots are dated; the Refresh button updates ESPN inputs only.
 
 ## Model v2
